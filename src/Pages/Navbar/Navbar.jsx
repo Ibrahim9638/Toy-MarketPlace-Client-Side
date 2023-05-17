@@ -12,7 +12,7 @@ const Navbar = () => {
   );
   return (
     <div className="shadow-xl">
-      <div className="navbar bg-base-100 h-28 mb-4 max-w-6xl mx-auto">
+      <div className="navbar bg-base-100 h-28  max-w-6xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
