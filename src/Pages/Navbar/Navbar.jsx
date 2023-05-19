@@ -21,16 +21,16 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link className="text-lg font-semibold hover:text-[#fcd34d]" to="/blog">
-          Blog
-        </Link>
-      </li>
-      <li>
         <Link
           className="text-lg font-semibold hover:text-[#fcd34d]"
           to="/alltoys"
         >
           All Toys
+        </Link>
+      </li>
+      <li>
+        <Link className="text-lg font-semibold hover:text-[#fcd34d]" to="/blog">
+          Blog
         </Link>
       </li>
 
