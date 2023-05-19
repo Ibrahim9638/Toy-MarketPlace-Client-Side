@@ -38,7 +38,7 @@ const Login = () => {
   }
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-[#ecf4fb]">
         <div className="hero-content flex-col lg:flex-row ">
           <div className="lg:w-full mr-14">
             <img className="rounded" src={logImg} alt="" />
