@@ -1,7 +1,9 @@
-import React, { useContext } from 'react';
+import React, { useContext} from 'react';
 import { Link } from 'react-router-dom';
 import regImg from '../../assets/login/login.jpg'
 import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
+
 
 const Register = () => {
   const {createUser} = useContext(AuthContext)
@@ -18,6 +20,13 @@ const Register = () => {
     createUser(email, password)
     .then(result=>{
       const user = result.user;
+      if(user){
+        Swal.fire(
+          'User Create Successfully',
+          'Welcome login page',
+          'success'
+        )
+      }
       console.log(user);
     })
     .catch(error =>{

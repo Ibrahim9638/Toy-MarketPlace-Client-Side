@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import logImg from "../../assets/login/login.jpg";
 import { AuthContext } from "../../Provider/AuthProvider";
 import googleIcon from '../../assets/google.png'
+import Swal from "sweetalert2";
+
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
@@ -17,6 +19,13 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
+
+            Swal.fire(
+                'User Login Successfully',
+                'Welcome to our login page',
+                'success'
+              )
+        
         console.log(user);
       })
       .catch((error) => {
@@ -26,7 +35,6 @@ const Login = () => {
 
   const handleGoogleSignIn = ()=>{
     googleSignIn()
-    
   }
   return (
     <div>

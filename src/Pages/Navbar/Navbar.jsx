@@ -27,7 +27,9 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          className="text-lg font-semibold hover:text-[#fcd34d]" to="/allToys">
+          className="text-lg font-semibold hover:text-[#fcd34d]"
+          to="/alltoys"
+        >
           All Toys
         </Link>
       </li>
@@ -51,6 +53,18 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link>
+              <img
+                src={user?.photoURL}
+                title={user?.displayName}
+                style={{
+                  width: "3rem",
+                  height: "3rem",
+                  borderRadius: "50%",
+                  border: "1px solid",
+                }}
+              />
+            </Link>
             <button
               onClick={handleLogout}
               className="text-lg font-semibold hover:text-[#fcd34d]"
