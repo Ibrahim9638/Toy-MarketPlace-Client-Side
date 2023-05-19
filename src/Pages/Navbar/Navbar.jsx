@@ -1,13 +1,74 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import logo from '../../assets/logo.png'
+import logo from "../../assets/logo.png";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   const navItems = (
     <>
-      <li><Link className="text-lg font-semibold hover:text-[#fcd34d]" to="/">Home</Link></li>
-      <li><Link className="text-lg font-semibold hover:text-[#fcd34d]" to="/blog">Blog</Link></li>
-      <li><Link className="text-lg font-semibold hover:text-[#fcd34d]" to="/login">Login</Link></li>
+      <li>
+        <Link className="text-lg font-semibold hover:text-[#fcd34d]" to="/">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link className="text-lg font-semibold hover:text-[#fcd34d]" to="/blog">
+          Blog
+        </Link>
+      </li>
+      <li>
+        <Link
+          className="text-lg font-semibold hover:text-[#fcd34d]" to="/allToys">
+          All Toys
+        </Link>
+      </li>
+
+      {user?.email ? (
+        <>
+          <li>
+            <Link
+              className="text-lg font-semibold hover:text-[#fcd34d]"
+              to="/addtoys"
+            >
+              Add Toys
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="text-lg font-semibold hover:text-[#fcd34d]"
+              to="/mytoys"
+            >
+              My Toys
+            </Link>
+          </li>
+          <li>
+            <button
+              onClick={handleLogout}
+              className="text-lg font-semibold hover:text-[#fcd34d]"
+            >
+              Logout
+            </button>
+          </li>
+        </>
+      ) : (
+        <li>
+          <Link
+            className="text-lg font-semibold hover:text-[#fcd34d]"
+            to="/login"
+          >
+            Login
+          </Link>
+        </li>
+      )}
     </>
   );
   return (
@@ -38,18 +99,22 @@ const Navbar = () => {
               {navItems}
             </ul>
           </div>
-         <div className="flex items-center">
-         <Link to="/">
-            <img className="h-12 w-12 mr-1" src={logo} alt="" />
-          </Link>
-          <p className="text-3xl font-bold text-[#dc2626]">Edu<span className="text-[#fcd34d]">Toys</span></p>
-         </div>
+          <div className="flex items-center">
+            <Link to="/">
+              <img className="h-12 w-12 mr-1" src={logo} alt="" />
+            </Link>
+            <p className="text-3xl font-bold text-[#dc2626]">
+              Edu<span className="text-[#fcd34d]">Toys</span>
+            </p>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-outline btn-warning">Unlimited Toys</button>
+          <button className="btn btn-outline btn-warning">
+            Unlimited Toys
+          </button>
         </div>
       </div>
     </div>

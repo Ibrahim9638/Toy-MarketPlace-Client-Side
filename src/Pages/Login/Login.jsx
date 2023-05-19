@@ -1,33 +1,39 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import logImg from '../../assets/login/login.jpg'
-import { AuthContext } from '../../Provider/AuthProvider';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import logImg from "../../assets/login/login.jpg";
+import { AuthContext } from "../../Provider/AuthProvider";
+import googleIcon from '../../assets/google.png'
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+  const { signIn, googleSignIn } = useContext(AuthContext);
 
-    const handleLogin = event=>{
-        event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
-        const user = {email, password}
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const user = { email, password };
+    console.log(user);
+
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
         console.log(user);
-        
-        signIn(email, password)
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-        })
-        .catch(error=>{
-            console.log(error.message);
-        })
-    }
-    return (
-        <div>
-             <div className="hero min-h-screen bg-base-200">
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  const handleGoogleSignIn = ()=>{
+    googleSignIn()
+    
+  }
+  return (
+    <div>
+      <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row ">
           <div className="lg:w-full mr-14">
-            <img className='rounded' src={logImg} alt="" />
+            <img className="rounded" src={logImg} alt="" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
@@ -41,7 +47,6 @@ const Login = () => {
                     type="text"
                     placeholder="email"
                     name="email"
-
                     className="input input-bordered"
                   />
                 </div>
@@ -53,7 +58,6 @@ const Login = () => {
                     type="password"
                     placeholder="password"
                     name="password"
-
                     className="input input-bordered"
                   />
                 </div>
@@ -65,14 +69,20 @@ const Login = () => {
                   />
                 </div>
               </form>
-              <p className="text-center">You do not have an account? <Link to='/register' className='text-[#c22373] font-bold' >Register</Link> </p>
-              
+              <div className="divider">OR</div>
+                <div className="text-center" onClick={ handleGoogleSignIn}>
+                    <img className="h-10 w-10 mx-auto cursor" src={googleIcon} alt="" />
+                </div>
+              <p className="text-center">
+                You do not have an account? 
+                <Link to="/register" className="text-[#c22373] font-bold">Register</Link>
+              </p>
             </div>
           </div>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Login;
