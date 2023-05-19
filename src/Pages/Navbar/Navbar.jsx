@@ -86,8 +86,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="shadow-xl">
-      <div className="navbar bg-base-100 h-28  max-w-6xl mx-auto">
+    <div className="shadow-xl bg-[#ecf4fb]">
+      <div className="navbar bg-[#ecf4fb] h-28  max-w-6xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -115,9 +115,9 @@ const Navbar = () => {
           </div>
           <div className="flex items-center">
             <Link to="/">
-              <img className="h-12 w-12 mr-1" src={logo} alt="" />
+              <img style={{widows:"45px", height:"45px", borderRadius:'50%', marginRight:'7px'}} src={logo} alt="" />
             </Link>
-            <p className="text-3xl font-bold text-[#dc2626]">
+            <p className="text-3xl font-bold text-[#dc2626]" style={{textShadow: "2px 2px 4px #000000"}}>
               Edu<span className="text-[#fcd34d]">Toys</span>
             </p>
           </div>
