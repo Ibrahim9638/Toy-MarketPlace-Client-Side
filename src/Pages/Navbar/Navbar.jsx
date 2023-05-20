@@ -47,7 +47,7 @@ const Navbar = () => {
           <li>
             <Link
               className="text-lg font-semibold hover:text-[#fcd34d]"
-              to="/mytoys"
+              to="/my-toys"
             >
               My Toys
             </Link>
