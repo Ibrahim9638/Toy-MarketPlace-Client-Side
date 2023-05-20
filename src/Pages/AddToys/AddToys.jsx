@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddToys = () => {
+  const {user} = useContext(AuthContext)
+
   const handleToys = (event) => {
     event.preventDefault();
     const toy= event.target.toy.value;
     const image1= event.target.image1.value;
     const image2= event.target.image2.value;
     const sellerName= event.target.sellerName.value;
-    const sellerEmail= event.target.email.value;
+    const sellerEmail= event.target.user?.email.value;
     const category= event.target.category.value;
     const quantity= event.target.quantity.value;
     const price= event.target.price.value;
@@ -16,6 +20,26 @@ const AddToys = () => {
 
     const user = {toy,image1,image2, sellerName, sellerEmail,category,rating, quantity, price,details}
     console.log(user);
+
+    fetch('http://localhost:3000/addToys',{
+      method: 'POST',
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(user)
+
+    })
+    .then(res=> res.json())
+    .then(data=> {
+      if(data.insertedId){
+        Swal.fire(
+          'Data Insert Successfully',
+          'Welcome data world',
+          'success'
+        )
+      }
+    })
+
   };
   return (
     <div className="bg-[#ecf4fb]">
@@ -71,6 +95,7 @@ const AddToys = () => {
               <input
                 type="text"
                 placeholder="Seller Name"
+                defaultValue={user?.displayName}
                 name="sellerName"
                 className="input input-bordered"
               />
@@ -82,6 +107,7 @@ const AddToys = () => {
               <input
                 type="email"
                 placeholder="Email"
+                defaultValue={user?.email}
                 name="email"
                 className="input input-bordered"
               />
