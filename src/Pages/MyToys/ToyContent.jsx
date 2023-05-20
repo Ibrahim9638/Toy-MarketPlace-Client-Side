@@ -1,45 +1,15 @@
 import React from 'react';
 import { AiFillDelete } from "react-icons/ai";
 import { FiEdit } from "react-icons/fi";
-import Swal from 'sweetalert2';
 
 
-const ToyContent = ({singleToys}) => {
-    console.log(singleToys);
-    const  {_id,toy,image1,image2, sellerName, sellerEmail,category,rating, quantity, price,details} = singleToys
 
-    const handleDelete = id=> {
-       const proceed =  Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
-            'success'
-          )
-        }
-      })
+const ToyContent = ({singleToys, handleDelete}) => {
 
-      if(proceed){
-        fetch(`http://localhost:3000/my-toys/${id}`,{
-            method: "DELETE"
-        })
-        .then(res=> res.json())
-        .then(data=>{
-            console.log(data);
-        })
-      }
-
-
-    }
+    const  { _id,toy,image1, sellerName, sellerEmail,category,rating, price} = singleToys;
     
+    
+
     return (
             <tr>
               <th>
@@ -79,7 +49,7 @@ const ToyContent = ({singleToys}) => {
               </th>
               <th>
               <p className='text-green-500 text-2xl  mb-2'><FiEdit/></p>
-              <p className='text-red-700 text-2xl' onClick={(_id)=> handleDelete()}><AiFillDelete/></p>
+              <p className='text-red-700 text-2xl' onClick={()=> handleDelete(_id)} ><AiFillDelete/></p>
               </th>
             </tr>
         

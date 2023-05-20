@@ -13,9 +13,27 @@ const MyToys = () => {
       .then((data) => setMyToys(data));
   }, []);
 
+  const handleDelete = id => {
+    const proceed = confirm("Are you Sure Want to Delete")
+    if(proceed){
+        fetch(`http://localhost:3000/my-toys/${id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.deletedCount > 0){
+                alert("Data Delete Successfully")
+                const remaining = myToys.filter(myToy => myToy._id !==id)
+                setMyToys(remaining)
+            }
+        })
+    }
+}
+
+
   return (
     <div>
-      <h2>My Toys: {myToys.length}</h2>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
@@ -40,8 +58,8 @@ const MyToys = () => {
                 myToys.map(singleToys=> <ToyContent
                  key={singleToys._id}
                  singleToys = {singleToys}
+                 handleDelete = {handleDelete}
                  >
-
                 </ToyContent>)
             }
           </tbody>
