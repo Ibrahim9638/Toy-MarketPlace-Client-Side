@@ -4,34 +4,23 @@
     padding: 0;
   }
   
-
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 500px;
-    height: 300px;
-    background: #f1f1f1;
-    margin: 100px auto 0;
-    word-break: break-all;
-    border: 1px solid rgba(0, 0, 0, 0.274);
-  }
   
   .bloc-tabs {
     display: flex;
   }
   .tabs {
-  
     padding: 15px;
     text-align: center;
     width: 50%;
-    background: rgba(128, 128, 128, 0.075);
+    background: rgba(27, 179, 95, 0.075);
     cursor: pointer;
     border-bottom: 1px solid rgba(0, 0, 0, 0.274);
     box-sizing: content-box;
     position: relative;
     outline: none;
+    font-weight: bold;
+    font-size: 19px;
+    box-shadow: 5px 10px 8px #888888;
   }
   .tabs:not(:last-child){
     border-right: 1px solid rgba(0, 0, 0, 0.274);
@@ -51,9 +40,8 @@
     transform: translateX(-50%);
     width: calc(100% + 2px);
     height: 5px;
-    background: rgb(88, 147, 241);
+    background: rgb(189, 9, 39);
   }
-  
   
   
   button {

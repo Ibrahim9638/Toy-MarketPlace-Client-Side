@@ -8,26 +8,33 @@ const SearchByCategory = () => {
     setToggleState(index);
   };
   return (
-  <div className="bg-[#ecf4fb]">
-      <div className="container">
+  <div className="bg-[#ecf4fb] pt-4 pb-10">
+     <h2
+        className="text-center text-4xl font-extrabold pb-16 text-[#dc2626]"
+        style={{ textShadow: "2px 2px 4px #000000" }}
+      >
+        Shop by  <span className="text-[#fcd34d]">Category</span>{" "}
+      </h2>
+
+      <div className="container max-w-6xl mx-auto">
       <div className="bloc-tabs">
         <button
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(1)}
         >
-          Tab 1
+          Math Toys
         </button>
         <button
           className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(2)}
         >
-          Tab 2
+          Language Toys
         </button>
         <button
           className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(3)}
         >
-          Tab 3
+          Engineering toys
         </button>
       </div>
 

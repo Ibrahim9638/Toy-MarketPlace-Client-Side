@@ -126,9 +126,10 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-outline btn-warning">
+          <button className="btn btn-outline bg-warning">
             Unlimited Toys
           </button>
+          
         </div>
       </div>
     </div>

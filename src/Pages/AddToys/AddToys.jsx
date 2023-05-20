@@ -11,7 +11,7 @@ const AddToys = () => {
     const image1= event.target.image1.value;
     const image2= event.target.image2.value;
     const sellerName= event.target.sellerName.value;
-    const sellerEmail= event.target.user?.email.value;
+    const sellerEmail= event.target.email.value;
     const category= event.target.category.value;
     const quantity= event.target.quantity.value;
     const price= event.target.price.value;

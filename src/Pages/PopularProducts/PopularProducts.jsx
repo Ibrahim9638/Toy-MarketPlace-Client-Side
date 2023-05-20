@@ -33,7 +33,7 @@ const PopularProducts = () => {
             </div>
             <p className="font-bold text-lg">Price: $8</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-outline btn-warning">Bu Now</button>
+              <button className="btn btn-outline bg-warning">Buy Now</button>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ const PopularProducts = () => {
             </div>
             <p className="font-bold text-lg">Price: $5.5</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-outline btn-warning">Bu Now</button>
+              <button className="btn btn-outline bg-warning">Buy Now</button>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ const PopularProducts = () => {
             </div>
             <p className="font-bold text-lg">Price: $12.5</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-outline btn-warning">Bu Now</button>
+              <button className="btn btn-outline bg-warning">Buy Now</button>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ const PopularProducts = () => {
             </div>
             <p className="font-bold text-lg">Price: $10</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-outline btn-warning">Bu Now</button>
+              <button className="btn btn-outline bg-warning">Buy Now</button>
             </div>
           </div>
         </div>
