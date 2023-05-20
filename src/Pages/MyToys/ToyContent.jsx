@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiFillDelete } from "react-icons/ai";
 import { FiEdit } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 
 
@@ -48,7 +49,7 @@ const ToyContent = ({singleToys, handleDelete}) => {
                <p className='text-orange-300'>{rating} Star</p>
               </th>
               <th>
-              <p className='text-green-500 text-2xl  mb-2'><FiEdit/></p>
+              <Link to={`/updateToy/${_id}`}><p className='text-green-500 text-2xl  mb-2'><FiEdit/></p></Link>
               <p className='text-red-700 text-2xl' onClick={()=> handleDelete(_id)} ><AiFillDelete/></p>
               </th>
             </tr>
