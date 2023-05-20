@@ -7,7 +7,6 @@ const SearchByCategory = () => {
   const [category, setCategory] = useState("Math Toys");
   const [dataByCat, setDataByCat] = useState([]);
 
-
   useEffect(() => {
     fetch(`http://localhost:3000/categories/${category}`)
       .then((res) => res.json())
@@ -63,13 +62,11 @@ const SearchByCategory = () => {
               toggleState === 1 ? "content  active-content" : "content"
             }
           >
-            {dataByCat.map((toy) => (
-              <SearchContent
-              key={toy._id}
-              toy={toy}
-              ></SearchContent>
-              
-            ))}
+            <div className="flex gap-4">
+              {dataByCat.map((toy) => (
+                <SearchContent key={toy._id} toy={toy}></SearchContent>
+              ))}
+            </div>
           </div>
 
           <div
@@ -77,10 +74,11 @@ const SearchByCategory = () => {
               toggleState === 2 ? "content  active-content" : "content"
             }
           >
-            <h2>Content 2</h2>
-            {dataByCat.map((toy) => (
-              <p key={toy._id}>{toy.category}</p>
-            ))}
+            <div className="flex gap-4">
+              {dataByCat.map((toy) => (
+                <SearchContent key={toy._id} toy={toy}></SearchContent>
+              ))}
+            </div>
           </div>
 
           <div
@@ -88,11 +86,11 @@ const SearchByCategory = () => {
               toggleState === 3 ? "content  active-content" : "content"
             }
           >
-            <h2>Content 3</h2>
-            {dataByCat.map((toy) => (
-              <p key={toy._id}>{toy.category}</p>
-              
-            ))}
+            <div className="flex gap-4">
+              {dataByCat.map((toy) => (
+                <SearchContent key={toy._id} toy={toy}></SearchContent>
+              ))}
+            </div>
           </div>
         </div>
       </div>
