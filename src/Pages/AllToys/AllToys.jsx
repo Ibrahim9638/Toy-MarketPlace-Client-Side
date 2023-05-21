@@ -1,11 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
+import React, { useEffect, useState } from "react";
 import AllToyContent from "./AllToyContent";
 import useTitle from "../../Hooks/useTitle";
 
+
 const AllToys = () => {
-  const [allToys, setAllToys] = useState([]);
-  useTitle('AllToys')
+const [allToys, setAllToys] = useState([]);
+const [searchValue, setSearchValue] = useState("")
+ useTitle('AllToys')
+ const handleSearch=(e)=>{
+  setSearchValue(e.target.value)
+  fetch(`http://localhost:3000/all-toys/${searchValue}`)
+  .then(res=> res.json())
+  .then(data=> setAllToys(data))
+ }
 
   useEffect(() => {
     fetch("http://localhost:3000/toys")
@@ -18,6 +25,7 @@ const AllToys = () => {
 
   return (
     <div className="bg-[#ecf4fb]">
+      <input onChange={handleSearch} type="text" placeholder="Type here" className="input input-bordered input-warning  mx-auto w-full max-w-xs" />
       <div className="overflow-x-auto py-4">
         <table className="table w-full">
           {/* head*/}

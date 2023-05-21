@@ -1,10 +1,11 @@
-import React from "react";
-import useTitle from "../../Hooks/useTitle";
+import React from 'react';
+import useTitle from '../../Hooks/useTitle';
 
 const Blog = () => {
   useTitle('Blog')
   return (
-    <div className="max-h-screen">
+    <div>
+       <div className="max-h-screen">
       <div
         tabIndex={0}
         className="collapse collapse-plus border border-base-300 bg-[#dcfce7] py-4 rounded "
@@ -85,6 +86,8 @@ const Blog = () => {
           </div>
         </div>
       </div>
+    </div>
+  
     </div>
   );
 };

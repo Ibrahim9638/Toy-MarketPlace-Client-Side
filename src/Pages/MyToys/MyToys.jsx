@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
+  const [sortValue, setSortValue] = useState("")
 
   useEffect(() => {
     fetch(`http://localhost:3000/my-toys?email=${user?.email}`)
@@ -13,6 +14,13 @@ const MyToys = () => {
       .then((data) => setMyToys(data));
   }, []);
 
+ const  handleSort =(e)=>{
+  setSortValue(e.target.value)
+
+ }
+ useEffect(()=>{fetch(`http://localhost:3000/my-toys/${user?.email}?sortBy=${sortValue}`)
+ .then(res=>res.json())
+ .then(data=>setMyToys(data))},[sortValue])
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -42,6 +50,10 @@ const MyToys = () => {
 
   return (
     <div>
+      <select onChange={handleSort}>
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}

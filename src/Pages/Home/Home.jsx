@@ -6,8 +6,9 @@ import Customers from "../Customers/Customers";
 import ShopByCategory from "../ShopByCategory/ShopByCategory";
 import useTitle from "../../Hooks/useTitle";
 
+
 const Home = () => {
-  useTitle('Home')
+ useTitle('Home')
   return (
     <div>
       <Banner></Banner>

@@ -5,11 +5,13 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import googleIcon from '../../assets/google.png'
 import Swal from "sweetalert2";
 import useTitle from "../../Hooks/useTitle";
+import { updateProfile } from "firebase/auth";
+
 
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
-  useTitle('login')
+  useTitle('Login')
   
   const handleLogin = (event) => {
     event.preventDefault();
@@ -21,6 +23,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
+       
 
             Swal.fire(
                 'User Login Successfully',

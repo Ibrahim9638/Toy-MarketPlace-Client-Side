@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import regImg from '../../assets/login/login.jpg'
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
-import useTitle from '../../Hooks/useTitle';
+import { updateProfile } from 'firebase/auth';
+
 
 
 const Register = () => {
   const {createUser} = useContext(AuthContext);
-  useTitle('Register')
+  
 
   const handleRegisterForm =event =>{
     event.preventDefault();
@@ -22,13 +23,16 @@ const Register = () => {
     createUser(email, password)
     .then(result=>{
       const user = result.user;
-      if(user){
+      updateProfile(user, {displayName: name, photoURL:photo})
+      .then(()=>{ 
         Swal.fire(
           'User Create Successfully',
           'Welcome login page',
           'success'
         )
-      }
+      })
+      .catch(()=>{})
+     
       console.log(user);
     })
     .catch(error =>{

@@ -6,8 +6,8 @@ import team3 from '../../assets/customer/Team-3.png'
 
 const Customers = () => {
   return (
-    <div>
-      <div className="pt-6 pb-6 bg-[#ecf4fb]">
+    <div data-aos="flip-down">
+      <div className="pt-6 pb-6 bg-[#ecf4fb]" >
         <h2
           className="text-center text-4xl font-extrabold pb-16 text-[#dc2626]"
           style={{ textShadow: "2px 2px 4px #000000" }}

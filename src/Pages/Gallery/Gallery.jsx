@@ -9,7 +9,7 @@ import img6 from "../../assets/gallery/6.png";
 
 const Gallery = () => {
   return (
-    <div className="bg-[#ecf4fb]">
+    <div className="bg-[#ecf4fb]" data-aos="zoom-in">
       <div className="pt-16 pb-6">
         <h2
           className="text-center text-4xl font-extrabold pb-12 text-[#dc2626]"
