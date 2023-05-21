@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiFillDelete } from "react-icons/ai";
+import { AiFillDelete } from "react-icons/Ai";
 import { FiEdit } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 

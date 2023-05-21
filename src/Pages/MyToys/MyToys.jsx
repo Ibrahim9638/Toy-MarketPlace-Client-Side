@@ -9,7 +9,7 @@ const MyToys = () => {
   const [sortValue, setSortValue] = useState("")
 
   useEffect(() => {
-    fetch(`http://localhost:3000/my-toys?email=${user?.email}`)
+    fetch(`https://assignment-11-server-navy-alpha.vercel.app/my-toys?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, []);
@@ -18,7 +18,7 @@ const MyToys = () => {
   setSortValue(e.target.value)
 
  }
- useEffect(()=>{fetch(`http://localhost:3000/my-toys/${user?.email}?sortBy=${sortValue}`)
+ useEffect(()=>{fetch(`https://assignment-11-server-navy-alpha.vercel.app/my-toys/${user?.email}?sortBy=${sortValue}`)
  .then(res=>res.json())
  .then(data=>setMyToys(data))},[sortValue])
   const handleDelete = (id) => {
@@ -32,7 +32,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/my-toys/${id}`, {
+        fetch(`https://assignment-11-server-navy-alpha.vercel.app/my-toys/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

@@ -21,7 +21,7 @@ const AddToys = () => {
     const user = {toy,image1,image2, sellerName, sellerEmail,category,rating, quantity, price,details}
     console.log(user);
 
-    fetch('http://localhost:3000/addToys',{
+    fetch('https://assignment-11-server-navy-alpha.vercel.app/addToys',{
       method: 'POST',
       headers:{
         'content-type':'application/json'

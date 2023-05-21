@@ -8,7 +8,7 @@ const ShopByCategory = () => {
     const [category, setCategory] = useState("Math Toys");
     const [dataByCat, setDataByCat] = useState([]);
     useEffect(() => {
-      fetch(`http://localhost:3000/categories/${category}`)
+      fetch(`https://assignment-11-server-navy-alpha.vercel.app/categories/${category}`)
         .then((res) => res.json())
         .then((data) => setDataByCat(data));
     }, [category]);

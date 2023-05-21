@@ -14,7 +14,7 @@ const UpdateToy = () => {
         const details= event.target.area.value;
         const updated = {quantity,price,details}
 
-        fetch(`http://localhost:3000/my-toys/${_id}`, {
+        fetch(`https://assignment-11-server-navy-alpha.vercel.app/my-toys/${_id}`, {
             method: "PUT",
             headers:{
                 'content-type': 'application/json'

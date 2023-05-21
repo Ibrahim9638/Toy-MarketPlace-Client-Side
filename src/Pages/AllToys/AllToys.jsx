@@ -9,13 +9,13 @@ const [searchValue, setSearchValue] = useState("")
  useTitle('AllToys')
  const handleSearch=(e)=>{
   setSearchValue(e.target.value)
-  fetch(`http://localhost:3000/all-toys/${searchValue}`)
+  fetch(`https://assignment-11-server-navy-alpha.vercel.app/all-toys/${searchValue}`)
   .then(res=> res.json())
   .then(data=> setAllToys(data))
  }
 
   useEffect(() => {
-    fetch("http://localhost:3000/toys")
+    fetch("https://assignment-11-server-navy-alpha.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
