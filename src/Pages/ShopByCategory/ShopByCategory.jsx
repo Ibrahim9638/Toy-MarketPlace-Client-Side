@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from "react";
-import "./SearchByCategory.css";
-import SearchContent from "../SearchContent/SearchContent";
+import React, { useEffect, useState } from 'react';
+import ShopContent from '../ShopContent/ShopContent';
+import './ShopByCategory.css'
 
-const SearchByCategory = () => {
-  const [toggleState, setToggleState] = useState(1);
-  const [category, setCategory] = useState("Math Toys");
-  const [dataByCat, setDataByCat] = useState([]);
 
-  useEffect(() => {
-    fetch(`http://localhost:3000/categories/${category}`)
-      .then((res) => res.json())
-      .then((data) => setDataByCat(data));
-  }, [category]);
-
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
-  return (
-    <div className="bg-[#ecf4fb] pt-4 pb-10">
+const ShopByCategory = () => {
+    const [toggleState, setToggleState] = useState(1);
+    const [category, setCategory] = useState("Math Toys");
+    const [dataByCat, setDataByCat] = useState([]);
+    useEffect(() => {
+      fetch(`http://localhost:3000/categories/${category}`)
+        .then((res) => res.json())
+        .then((data) => setDataByCat(data));
+    }, [category]);
+  
+    const toggleTab = (index) => {
+      setToggleState(index);
+    };
+  
+    return (
+        <div className="bg-[#ecf4fb] pt-4 pb-10">
       <h2
         className="text-center text-4xl font-extrabold pb-16 text-[#dc2626]"
         style={{ textShadow: "2px 2px 4px #000000" }}
@@ -26,7 +27,7 @@ const SearchByCategory = () => {
       </h2>
 
       <div className="container max-w-6xl mx-auto">
-        <div className="bloc-tabs">
+        <div className="bloc-tabs p-4">
           <button
             className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
             onClick={() => {
@@ -62,9 +63,9 @@ const SearchByCategory = () => {
               toggleState === 1 ? "content  active-content" : "content"
             }
           >
-            <div className="flex gap-4">
+            <div className="lg:flex gap-4 ">
               {dataByCat.map((toy) => (
-                <SearchContent key={toy._id} toy={toy}></SearchContent>
+                <ShopContent key={toy._id} toy={toy}></ShopContent>
               ))}
             </div>
           </div>
@@ -74,9 +75,9 @@ const SearchByCategory = () => {
               toggleState === 2 ? "content  active-content" : "content"
             }
           >
-            <div className="flex gap-4">
+            <div className=" lg:flex lg:gap-4 ">
               {dataByCat.map((toy) => (
-                <SearchContent key={toy._id} toy={toy}></SearchContent>
+                <ShopContent key={toy._id} toy={toy}></ShopContent>
               ))}
             </div>
           </div>
@@ -86,9 +87,9 @@ const SearchByCategory = () => {
               toggleState === 3 ? "content  active-content" : "content"
             }
           >
-            <div className="flex gap-4">
+            <div className="lg:flex gap-4">
               {dataByCat.map((toy) => (
-                <SearchContent key={toy._id} toy={toy}></SearchContent>
+                <ShopContent key={toy._id} toy={toy}></ShopContent>
               ))}
             </div>
           </div>
@@ -98,4 +99,8 @@ const SearchByCategory = () => {
   );
 };
 
-export default SearchByCategory;
+
+    
+
+
+export default ShopByCategory;

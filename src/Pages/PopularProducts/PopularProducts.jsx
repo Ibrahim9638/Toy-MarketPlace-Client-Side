@@ -3,7 +3,9 @@ import lang1 from "../../assets/popular/1.jpg";
 import lang2 from "../../assets/popular/2.png";
 import lang3 from "../../assets/popular/3.jpg";
 import lang4 from "../../assets/popular/4.jpg";
-import { FaStar, FaRegStarHalf } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+
+
 
 const PopularProducts = () => {
   return (
@@ -14,7 +16,7 @@ const PopularProducts = () => {
       >
         Popular <span className="text-[#fcd34d]">Products</span>{" "}
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-1 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-1 max-w-6xl mx-auto">
         <div className="card w-full glass">
           <figure>
             <img style={{ height: "300px" }} src={lang1} alt="car!" />

@@ -1,15 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const SearchContent = ({ toy }) => {
-  console.log(toy);
-  return (
-    <div>
+const ShopContent = ({toy}) => {
+    return (
+        <div>
       <div className="card w-96 h-96 bg-base-100 shadow-xl">
         <figure>
           <img src={toy.image1} alt="Shoes" />
         </figure>
-        <div className="card-body">
+        <div className="card-body border ">
           <h2
             className="card-title font-bold"
             style={{ textShadow: "0px 0px 1px #f00000" }}
@@ -29,4 +28,7 @@ const SearchContent = ({ toy }) => {
   );
 };
 
-export default SearchContent;
+
+
+
+export default ShopContent;

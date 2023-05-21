@@ -18,7 +18,7 @@ const Gallery = () => {
           Photo <span className="text-[#fcd34d]">Gallery</span>{" "}
         </h2>
 
-        <div className="img-gallery py-8 max-w-6xl mx-auto ">
+        <div className="img-gallery py-8 max-w-6xl mx-auto" data-aos="zoom-in-down">
           <img src={img1} alt="" className="rounded border-2" />
           <img src={img2} alt="" className="rounded border-2" />
           <img src={img3} alt="" className="rounded border-2" />

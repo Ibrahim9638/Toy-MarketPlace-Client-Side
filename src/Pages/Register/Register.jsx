@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import regImg from '../../assets/login/login.jpg'
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hooks/useTitle';
 
 
 const Register = () => {
-  const {createUser} = useContext(AuthContext)
+  const {createUser} = useContext(AuthContext);
+  useTitle('Register')
 
   const handleRegisterForm =event =>{
     event.preventDefault();

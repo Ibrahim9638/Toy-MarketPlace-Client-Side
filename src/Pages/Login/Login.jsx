@@ -4,11 +4,13 @@ import logImg from "../../assets/login/login.jpg";
 import { AuthContext } from "../../Provider/AuthProvider";
 import googleIcon from '../../assets/google.png'
 import Swal from "sweetalert2";
+import useTitle from "../../Hooks/useTitle";
 
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
-
+  useTitle('login')
+  
   const handleLogin = (event) => {
     event.preventDefault();
     const email = event.target.email.value;

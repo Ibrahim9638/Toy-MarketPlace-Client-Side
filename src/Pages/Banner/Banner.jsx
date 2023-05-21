@@ -12,7 +12,7 @@ const Banner = () => {
 
           <div className="absolute rounded-lg flex h-full items-center left-0 top-0 bg-gradient-to-r from-[#2e2d2d] to-[rgba(21, 21, 21, 0)]">
             <div className="text-white space-y-7 pl-6 lg:pl-28 lg:w-1/2">
-                <h1 className="lg:text-6xl font-bold">Child building robot at robotic technology</h1>
+                <h1 className="text-4xl lg:text-6xl font-bold">Child building robot at robotic technology</h1>
                 <p>Delivering smile with toys. Get your unbeatable fun <br /> and learning experience with our creative toys</p>
                 <div>
                 <button className="btn btn-active btn-lg hover:bg-red-600 bg-[#FDBE3E] text-black">Read More</button>
@@ -37,7 +37,7 @@ const Banner = () => {
           />
              <div className="absolute rounded-lg flex h-full items-center left-0 top-0 bg-gradient-to-r from-[#2e2d2d] to-[rgba(21, 21, 21, 0)]">
              <div className="text-white space-y-7 pl-6 lg:pl-28 lg:w-1/2">
-                <h1 className="lg:text-6xl font-bold">Extraordinary Learning for Toys</h1>
+                <h1 className=" text-4xl lg:text-6xl font-bold">Extraordinary Learning for Toys</h1>
                 <p>Premium toy for the genuine start. The best place to your buy dream toys. WE provide toys for all age kids</p>
                 <div>
                 <button className="btn btn-active btn-lg hover:bg-red-600 bg-[#FDBE3E] text-black">Read More</button>
@@ -61,7 +61,7 @@ const Banner = () => {
           />
              <div className="absolute rounded-lg flex h-full items-center left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
              <div className="text-white space-y-7 pl-6 lg:pl-28 lg:w-1/2">
-                <h1 className="lg:text-6xl font-bold">A Word Explore for Everything</h1>
+                <h1 className="text-4xl lg:text-6xl font-bold">A Word Explore for Everything</h1>
                 <p>Active toys for smart and active kids. Bring fun and not-stop learning for your little one</p>
                 <div>
                 <button className="btn btn-active btn-lg hover:bg-red-600 bg-[#FDBE3E] text-black">Read More</button>
@@ -85,7 +85,7 @@ const Banner = () => {
           />
              <div className="absolute rounded-lg flex h-full items-center left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
              <div className="text-white space-y-7 pl-6 lg:pl-28 lg:w-1/2">
-                <h1 className="lg:text-6xl font-bold">Top Toys for Engineers of All Ages</h1>
+                <h1 className="text-4xl lg:text-6xl font-bold">Top Toys for Engineers of All Ages</h1>
                 <p>Delivering smile with toys. Get your unbeatable fun <br /> and learning experience with our creative toys</p>
                 <div>
                 <button className="btn btn-active btn-lg hover:bg-red-600 bg-[#FDBE3E] text-black">Read More</button>

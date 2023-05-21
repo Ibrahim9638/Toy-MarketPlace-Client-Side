@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import AllToyContent from "./AllToyContent";
+import useTitle from "../../Hooks/useTitle";
 
 const AllToys = () => {
-  const { user } = useContext(AuthContext);
   const [allToys, setAllToys] = useState([]);
+  useTitle('AllToys')
 
   useEffect(() => {
     fetch("http://localhost:3000/toys")

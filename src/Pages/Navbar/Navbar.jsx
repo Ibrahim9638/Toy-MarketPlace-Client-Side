@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { AuthContext } from "../../Provider/AuthProvider";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -86,8 +87,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="drop-shadow-lg bg-[#ecf4fb]">
-      <div className="navbar bg-[#ecf4fb] h-28  max-w-6xl mx-auto">
+    <div className="navbar bg-base-100 " data-aos="fade-down-left">
+      <div className="navbar  max-w-6xl mx-auto" >
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -114,10 +115,13 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex items-center">
-            <Link to="/">
-              <img style={{widows:"45px", height:"45px", borderRadius:'50%', marginRight:'7px'}} src={logo} alt="" />
-            </Link>
-            <p className="text-3xl font-bold text-[#dc2626]" style={{textShadow: "2px 2px 4px #000000"}}>
+            <div className="w-10 rounded-full">
+              <img src={logo} style={{width:'40px', height:'40px', borderRadius:'50%'}}/>
+            </div>
+            <p
+              className="text-3xl font-bold text-[#dc2626]"
+              style={{ textShadow: "2px 2px 4px #000000" }}
+            >
               Edu<span className="text-[#fcd34d]">Toys</span>
             </p>
           </div>
@@ -125,12 +129,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
-        <div className="navbar-end">
-          <button className="btn btn-outline bg-warning">
-            Unlimited Toys
-          </button>
-          
-        </div>
+       
       </div>
     </div>
   );
