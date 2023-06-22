@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ShopContent = ({toy}) => {
     return (
         <div>
-      <div className="card w-96 h-96 bg-base-100 shadow-xl">
+      <div className="card w-[350px] h-96 bg-base-100 shadow-xl">
         <figure>
           <img src={toy.image1} alt="Shoes" />
         </figure>

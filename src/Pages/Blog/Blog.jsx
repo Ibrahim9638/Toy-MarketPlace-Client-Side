@@ -10,7 +10,7 @@ const Blog = () => {
         tabIndex={0}
         className="collapse collapse-plus border border-base-300 bg-[#dcfce7] py-4 rounded "
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="0">
           <div className="collapse-title text-xl font-extrabold text-[#065f46]">
             Question-1: What is an access token and refresh token? How do they
             work and where should we store them on the client-side?
@@ -39,7 +39,7 @@ const Blog = () => {
         tabIndex={1}
         className="collapse collapse-plus border border-base-300 bg-[#dcfce7] py-4 rounded "
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="0">
           <div className="collapse-title text-xl font-extrabold text-[#14532d]">
             Question-2: Compare SQL and NoSQL databases?
           </div>
@@ -58,7 +58,7 @@ const Blog = () => {
         tabIndex={2}
         className="collapse collapse-plus border border-base-300 bg-[#dcfce7] py-4 rounded "
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="0">
           <div className="collapse-title text-xl font-extrabold text-[#14532d]">
             Question-3: What is express js? What is Nest JS?
           </div>
@@ -75,7 +75,7 @@ const Blog = () => {
         tabIndex={3}
         className="collapse collapse-plus border border-base-300 bg-[#dcfce7] py-4 rounded "
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="0">
           <div className="collapse-title text-xl font-extrabold text-[#14532d]">
             Question-4: What is MongoDB aggregate and how does it work?
           </div>

@@ -16,7 +16,7 @@ const PopularProducts = () => {
       >
         Popular <span className="text-[#fcd34d]">Products</span>{" "}
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-1 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-1 ">
         <div className="card w-full glass">
           <figure>
             <img style={{ height: "300px" }} src={lang1} alt="car!" />

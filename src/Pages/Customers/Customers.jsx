@@ -12,7 +12,7 @@ const Customers = () => {
           className="text-center text-4xl font-extrabold pb-16 text-[#dc2626]"
           style={{ textShadow: "2px 2px 4px #000000" }}
         >What Our <span className="text-[#fcd34d]">Customers Say</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 0">
             <div className="space-y-4 text-center">
                 <img src={team1} alt="" style={{width: "100px", height:'100px', borderRadius:'50%', margin:'auto'}} />
                 <p className="text-md pl-2" style={{textShadow: '1px 1px 15px #000000'}}>I recently purchased the math toy set for my 10-year-old daughter, and I cannot express how impressed I am with its quality and educational value. This toy has turned math into an exciting adventure for her!</p>

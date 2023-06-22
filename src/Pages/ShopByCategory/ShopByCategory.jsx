@@ -26,7 +26,7 @@ const ShopByCategory = () => {
         Shop by <span className="text-[#fcd34d]">Category</span>{" "}
       </h2>
 
-      <div className="container max-w-6xl mx-auto">
+      <div className="container ">
         <div className="bloc-tabs p-4">
           <button
             className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
@@ -63,7 +63,7 @@ const ShopByCategory = () => {
               toggleState === 1 ? "content  active-content" : "content"
             }
           >
-            <div className="lg:flex gap-4 ">
+            <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
               {dataByCat.map((toy) => (
                 <ShopContent key={toy._id} toy={toy}></ShopContent>
               ))}
@@ -75,7 +75,7 @@ const ShopByCategory = () => {
               toggleState === 2 ? "content  active-content" : "content"
             }
           >
-            <div className=" lg:flex lg:gap-4 ">
+            <div className=" grid grid-cols-1 lg:grid-cols-3 lg:gap-4 ">
               {dataByCat.map((toy) => (
                 <ShopContent key={toy._id} toy={toy}></ShopContent>
               ))}
@@ -87,7 +87,7 @@ const ShopByCategory = () => {
               toggleState === 3 ? "content  active-content" : "content"
             }
           >
-            <div className="lg:flex gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4">
               {dataByCat.map((toy) => (
                 <ShopContent key={toy._id} toy={toy}></ShopContent>
               ))}

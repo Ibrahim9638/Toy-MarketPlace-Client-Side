@@ -8,7 +8,7 @@ import { MdContacts } from 'react-icons/Md';
 const Footer = () => {
   return (
     <div>
-      <footer className="footer px-10 py-8  bg-neutral text-neutral-content ">
+      <footer className="footer px-10 py-8 mt-8  bg-neutral text-neutral-content ">
      
         <div className="">
           

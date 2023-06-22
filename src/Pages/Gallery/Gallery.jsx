@@ -17,15 +17,15 @@ const Gallery = () => {
         >
           Photo <span className="text-[#fcd34d]">Gallery</span>{" "}
         </h2>
-
-        <div className="img-gallery py-8 max-w-6xl mx-auto" data-aos="zoom-in-down">
-          <img src={img1} alt="" className="rounded border-2" />
-          <img src={img2} alt="" className="rounded border-2" />
-          <img src={img3} alt="" className="rounded border-2" />
-          <img src={img4} alt="" className="rounded border-2" />
-          <img src={img5} alt="" className="rounded border-2" />
-          <img src={img6} alt="" className="rounded border-2" />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-2" data-aos="zoom-in-down">
+          <img src={img1} alt="" className="w-full h-full rounded" />
+          <img src={img2} alt="" className="w-full h-full rounded" />
+          <img src={img3} alt="" className="w-full h-full rounded" />
+          <img src={img4} alt="" className="w-full h-full rounded" />
+          <img src={img5} alt="" className="w-full h-full rounded" />
+          <img src={img6} alt="" className="w-full h-full rounded" />
         </div>
+       
       </div>
     </div>
   );

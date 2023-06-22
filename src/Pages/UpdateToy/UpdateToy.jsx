@@ -38,7 +38,7 @@ const UpdateToy = () => {
 
     return (
         <div className="bg-[#ecf4fb]">
-      <div className="card-body max-w-6xl mx-auto">
+      <div className="card-body 0">
         <h2
           className="text-center text-4xl font-extrabold pb-12 text-[#dc2626]"
           style={{ textShadow: "2px 2px 4px #000000" }}

@@ -87,7 +87,7 @@ console.log(user)
     </>
   );
   return (
-    <div className="navbar bg-base-100 " data-aos="fade-down-left">
+    <div className="navbar bg-[#ecf4fb] " data-aos="fade-down-left">
       <div className="navbar  max-w-6xl mx-auto" >
         <div className="navbar-start">
           <div className="dropdown">
